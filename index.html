@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shamakito — Arte y diversión en madera | Tienda Montessori</title>
+    <meta
+      name="description"
+      content="Juguetes Montessori y mobiliario infantil en madera certificada para desarrollar la creatividad, la lógica y la autonomía de los niños."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Mobile & Tablet Navigation Drawer -->
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menú móvil">
+      <div class="drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/img/logo.png" alt="Shamakito Logo" />
+        </a>
+        <button
+          type="button"
+          class="drawer-close"
+          id="closeDrawerBtn"
+          aria-label="Cerrar menú"
+        >
+          <svg
+            class="icon-svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link active"
+          >Inicio
+          <span
+            class="stock-dot"
+            style="background: var(--action-cta); width: 8px; height: 8px"
+          ></span
+        ></a>
+        <a href="catalogo.html" class="drawer-link"
+          >Catálogo de Productos
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="carrito.html" class="drawer-link"
+          >Mi Carrito <span class="cart-badge js-cart-count">3</span></a
+        >
+        <a href="checkout.html" class="drawer-link"
+          >Confirmar Pedido
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="perfil.html" class="drawer-link"
+          >Mi Perfil
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="pedidos.html" class="drawer-link"
+          >Mis Pedidos
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="favoritos.html" class="drawer-link"
+          >Mis Favoritos
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="design-system.html" class="drawer-link"
+          >Design System v2
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="login.html" class="drawer-link"
+          >Cerrar sesión
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+      </nav>
+    </aside>
+
+    <!-- Site Header (Apple Frosted Glass on Scroll) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="header-left">
+          <button
+            type="button"
+            class="menu-toggle js-open-drawer"
+            aria-label="Abrir menú"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <a href="index.html" class="brand-logo">
+            <img
+              src="assets/img/logo.png"
+              alt="Shamakito — Arte y diversión en madera"
+            />
+          </a>
+        </div>
+
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="index.html" class="nav-pill nav-link-page active">INICIO</a>
+          <a href="catalogo.html" class="nav-pill nav-link-page">PRODUCTOS</a>
+          <a href="carrito.html" class="nav-pill">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+              ></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span>CARRITO</span>
+            <span class="cart-badge js-cart-count">3</span>
+          </a>
+          <a href="perfil.html" class="user-pill">
+            <span class="user-initial">F</span>
+            <span>FABRICIO</span>
+            <span class="user-caret"
+              ><svg
+                class="icon-svg"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" /></svg
+            ></span>
+          </a>
+        </nav>
+
+        <!-- Mobile Right Actions -->
+        <div class="header-mobile-actions">
+          <a href="carrito.html" class="mobile-cart-btn" aria-label="Carrito">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+              ></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-badge js-cart-count">3</span>
+          </a>
+          <button
+            type="button"
+            class="menu-toggle js-open-drawer"
+            aria-label="Abrir menú"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section with Apple-Style Parallax Stage & 3D Floating Glass Badges -->
+      <section class="hero-home hero-home-apple">
+        <div class="container hero-home-grid">
+          <div class="hero-home-content apple-reveal is-visible">
+            <span class="hero-pill-tag">
+              <svg
+                class="icon-svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"
+                />
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+              </svg>
+              <span>TIENDA MONTESSORI</span>
+            </span>
+            <h1 class="hero-home-title">
+              Aprender jugando,<br />
+              <span class="hero-title-gradient">crecer feliz.</span>
+            </h1>
+            <p class="hero-home-desc">
+              Juguetes Montessori que desarrollan la creatividad, la lógica y la
+              autonomía de los niños en cada etapa de su desarrollo.
+            </p>
+            <div class="hero-actions">
+              <a href="catalogo.html" class="hero-pill-btn"
+                >EXPLORAR PRODUCTOS →</a
+              >
+              <a href="#proposito" class="hero-pill-btn">VER PROPÓSITO</a>
+            </div>
+          </div>
+
+          <!-- 3D Perspective Stage -->
+          <div
+            class="apple-hero-stage apple-reveal is-visible"
+            id="appleHeroStage"
+            style="--reveal-delay: 110ms"
+          >
+            <div class="apple-floating-badge badge-top-right">
+              <span class="apple-badge-icon">
+                <svg
+                  class="icon-svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <polyline points="9 12 11 14 15 10" />
+                </svg>
+              </span>
+              <div>
+                <div style="font-size: 12px">100% Madera Certificada</div>
+                <small
+                  style="
+                    font-size: 10px;
+                    color: var(--text-secondary);
+                    font-weight: 500;
+                  "
+                  >Acabado natural no tóxico</small
+                >
+              </div>
+            </div>
+
+            <div class="apple-hero-frame">
+              <img
+                src="assets/img/hero-home.jpg"
+                alt="Niño jugando con bloques de madera Montessori"
+              />
+            </div>
+
+            <div class="apple-floating-badge badge-bottom-left">
+              <span class="apple-badge-icon">
+                <svg
+                  class="icon-svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z"
+                  />
+                </svg>
+              </span>
+              <div>
+                <div style="font-size: 12px">Método Montessori</div>
+                <small
+                  style="
+                    font-size: 10px;
+                    color: var(--text-secondary);
+                    font-weight: 500;
+                  "
+                  >Autonomía y concentración</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="container apple-scroll-cue">
+          <a href="#datos-shamakito">
+            <span>Desliza para descubrir</span>
+            <svg
+              class="icon-svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Stats Section (Apple Bento Cards with Live Animated Counters) -->
+      <section class="stats-section" id="datos-shamakito">
+        <div class="container">
+          <div class="stats-mobile-label">NUESTROS DATOS</div>
+          <div class="stats-grid">
+            <div
+              class="stat-card apple-stat-bento apple-reveal"
+              style="--reveal-delay: 0ms"
+            >
+              <div
+                class="stat-num js-apple-counter"
+                data-target="500"
+                data-suffix="+"
+              >
+                500+
+              </div>
+              <div class="stat-label">Productos Montessori</div>
+            </div>
+            <div
+              class="stat-card apple-stat-bento apple-reveal"
+              style="--reveal-delay: 85ms"
+            >
+              <div
+                class="stat-num js-apple-counter"
+                data-target="12"
+                data-suffix="k+"
+              >
+                12k+
+              </div>
+              <div class="stat-label">Familias satisfechas</div>
+            </div>
+            <div
+              class="stat-card apple-stat-bento apple-reveal"
+              style="--reveal-delay: 170ms"
+            >
+              <div
+                class="stat-num js-apple-counter"
+                data-target="100"
+                data-suffix="%"
+              >
+                100%
+              </div>
+              <div class="stat-label">Madera certificada</div>
+            </div>
+            <div
+              class="stat-card apple-stat-bento apple-reveal"
+              style="--reveal-delay: 255ms"
+            >
+              <div
+                class="stat-num js-apple-counter"
+                data-target="5"
+                data-suffix="★"
+              >
+                5★
+              </div>
+              <div class="stat-label">Valoración promedio</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories Section (Scroll-Reveal & Inner Image Zoom-Out) -->
+      <section class="categories-section">
+        <div class="container">
+          <div class="apple-reveal">
+            <span class="section-eyebrow"
+              >COLECCIONES DISEÑADAS CON PROPÓSITO</span
+            >
+            <h2 class="section-title">Explora nuestras categorías</h2>
+          </div>
+          <div class="categories-grid">
+            <article
+              class="category-card apple-zoom-card apple-reveal"
+              style="--reveal-delay: 60ms"
+            >
+              <div class="category-info">
+                <h3>Juguetes Didácticos</h3>
+                <p>Materiales que estimulan el aprendizaje activo</p>
+                <a
+                  href="catalogo.html?categoria=Juguetes+Did%C3%A1cticos"
+                  class="cat-link-pill"
+                  >EXPLORAR MAS →</a
+                >
+              </div>
+              <div class="category-img">
+                <img
+                  src="assets/img/cat-didacticos.jpg"
+                  alt="Juguetes Didácticos"
+                />
+              </div>
+            </article>
+
+            <article
+              class="category-card apple-zoom-card apple-reveal"
+              style="--reveal-delay: 160ms"
+            >
+              <div class="category-info">
+                <h3>Mobiliario Infantil</h3>
+                <p>Diseño ergonómico para el desarrollo integral</p>
+                <a
+                  href="catalogo.html?categoria=Mobiliario+Infantil"
+                  class="cat-link-pill"
+                  >EXPLORAR MAS →</a
+                >
+              </div>
+              <div class="category-img">
+                <img
+                  src="assets/img/cat-mobiliario.jpg"
+                  alt="Mobiliario Infantil"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Purpose Section (Apple-Style Pinned Scrollytelling Showcase) -->
+      <section class="purpose-section" id="proposito">
+        <div class="container">
+          <div class="apple-scrolly-grid">
+            <!-- Left Narrative Column -->
+            <div class="purpose-content apple-reveal">
+              <span class="section-eyebrow">
+                <svg
+                  class="icon-svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"
+                  />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                </svg>
+                <span>¿POR QUÉ SHAMAKITO?</span>
+              </span>
+              <h2 class="purpose-title">
+                Cada juguete tiene<br />un propósito
+              </h2>
+              <p class="purpose-text">
+                Creamos productos pensados para acompañar cada etapa del
+                desarrollo infantil con amor, seguridad y propósito Montessori.
+              </p>
+
+              <!-- 3 Interactive Scrollytelling Chapters -->
+              <div class="apple-story-steps">
+                <article
+                  class="apple-story-step active js-story-step"
+                  data-step-index="0"
+                  data-caption="01 · Madera certificada pulida a mano con acabados al agua"
+                >
+                  <span class="apple-step-num">01 · MATERIALES NOBLES</span>
+                  <h3>Madera viva, cálida y 100% segura</h3>
+                  <p>
+                    Cada pieza transmite peso real, textura orgánica y bordes
+                    suavizados artesanalmente para proteger sus manos desde el
+                    primer día.
+                  </p>
+                </article>
+
+                <article
+                  class="apple-story-step js-story-step"
+                  data-step-index="1"
+                  data-caption="02 · Caja de Encaje: geometría táctil y autocorrección autónoma"
+                >
+                  <span class="apple-step-num">02 · AUTONOMÍA MONTESSORI</span>
+                  <h3>Descubrir sin intervención adulta</h3>
+                  <p>
+                    Nuestros materiales permiten comprobar, corregir y volver a
+                    intentar por sí mismos, fortaleciendo su concentración y
+                    confianza.
+                  </p>
+                </article>
+
+                <article
+                  class="apple-story-step js-story-step"
+                  data-step-index="2"
+                  data-caption="03 · Carrito Pasajero: coordinación motriz fina e imaginación libre"
+                >
+                  <span class="apple-step-num"
+                    >03 · DURABILIDAD GENERACIONAL</span
+                  >
+                  <h3>Hechos para durar y compartirse</h3>
+                  <p>
+                    Lejos del plástico descartable, construimos juguetes
+                    resistentes que acompañan distintas etapas y pasan de
+                    hermano a hermano.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <!-- Right Pinned Sticky Visual Stage -->
+            <div
+              class="apple-sticky-showcase apple-reveal"
+              style="--reveal-delay: 120ms"
+            >
+              <img
+                src="assets/img/proposito-home.jpg"
+                alt="Cada juguete tiene un propósito"
+                class="apple-showcase-slide active js-showcase-slide"
+              />
+              <img
+                src="assets/img/prod-caja-encaje.jpg"
+                alt="Caja de Encaje Montessori"
+                class="apple-showcase-slide js-showcase-slide"
+              />
+              <img
+                src="assets/img/prod-carrito-pasajero.jpg"
+                alt="Carrito Pasajero en madera"
+                class="apple-showcase-slide js-showcase-slide"
+              />
+
+              <div class="apple-showcase-caption">
+                <strong id="appleShowcaseCaptionText"
+                  >01 · Madera certificada pulida a mano con acabados al
+                  agua</strong
+                >
+                <div class="apple-showcase-dots">
+                  <span
+                    class="apple-showcase-dot active js-showcase-dot"
+                  ></span>
+                  <span class="apple-showcase-dot js-showcase-dot"></span>
+                  <span class="apple-showcase-dot js-showcase-dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Best Sellers Section (Staggered Apple Spring Cascade) -->
+      <section class="bestsellers-section">
+        <div class="container">
+          <div class="section-header-row apple-reveal">
+            <div>
+              <span class="section-eyebrow">FAVORITOS DE LAS FAMILIAS</span>
+              <h2 class="section-title">Productos más vendidos</h2>
+            </div>
+            <a href="catalogo.html" class="section-link"
+              >Ver catálogo completo →</a
+            >
+          </div>
+
+          <div class="products-4-grid">
+            <!-- Product 1: Caja de Encaje -->
+            <article
+              class="product-card apple-reveal"
+              style="--reveal-delay: 0ms"
+            >
+              <div class="product-thumb-wrap">
+                <button
+                  type="button"
+                  class="fav-btn js-fav-toggle"
+                  data-id="caja-de-encaje"
+                  aria-label="Guardar en favoritos"
+                >
+                  <svg
+                    class="icon-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </button>
+                <a href="producto.html">
+                  <img
+                    src="assets/img/prod-caja-encaje.jpg"
+                    alt="CAJA DE ENCAJE"
+                  />
+                </a>
+              </div>
+              <div class="product-body">
+                <span class="product-cat">Juguetes Didácticos</span>
+                <h3 class="product-title">
+                  <a href="producto.html">CAJA DE ENCAJE</a>
+                </h3>
+                <div class="product-rating">
+                  <span class="stars">★ ★ ★ ★</span>
+                  <span>(4)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">S/.250.00</span>
+                  <button
+                    type="button"
+                    class="btn btn-cta btn-sm js-add-to-cart"
+                    data-id="caja-de-encaje"
+                  >
+                    + Carrito
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 2: Carrito Pasajero -->
+            <article
+              class="product-card apple-reveal"
+              style="--reveal-delay: 90ms"
+            >
+              <div class="product-thumb-wrap">
+                <button
+                  type="button"
+                  class="fav-btn js-fav-toggle"
+                  data-id="carrito-pasajero"
+                  aria-label="Guardar en favoritos"
+                >
+                  <svg
+                    class="icon-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </button>
+                <a href="producto.html?id=carrito-pasajero">
+                  <img
+                    src="assets/img/prod-carrito-pasajero.jpg"
+                    alt="CARRITO PASAJERO"
+                  />
+                </a>
+              </div>
+              <div class="product-body">
+                <span class="product-cat">Juguetes Didácticos</span>
+                <h3 class="product-title">
+                  <a href="producto.html?id=carrito-pasajero"
+                    >CARRITO PASAJERO</a
+                  >
+                </h3>
+                <div class="product-rating">
+                  <span class="stars">★ ★ ★ ★</span>
+                  <span>(4.9)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">S/.45.00</span>
+                  <button
+                    type="button"
+                    class="btn btn-cta btn-sm js-add-to-cart"
+                    data-id="carrito-pasajero"
+                  >
+                    + Carrito
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 3: Bloque de Colores -->
+            <article
+              class="product-card apple-reveal"
+              style="--reveal-delay: 180ms"
+            >
+              <div class="product-thumb-wrap">
+                <button
+                  type="button"
+                  class="fav-btn js-fav-toggle"
+                  data-id="bloques-de-colores"
+                  aria-label="Guardar en favoritos"
+                >
+                  <svg
+                    class="icon-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </button>
+                <a href="producto.html?id=bloques-de-colores">
+                  <img
+                    src="assets/img/prod-bloques-colores.jpg"
+                    alt="BLOQUE DE COLORES"
+                  />
+                </a>
+              </div>
+              <div class="product-body">
+                <span class="product-cat">Juguetes Didácticos</span>
+                <h3 class="product-title">
+                  <a href="producto.html?id=bloques-de-colores"
+                    >BLOQUE DE COLORES</a
+                  >
+                </h3>
+                <div class="product-rating">
+                  <span class="stars">★ ★ ★ ★</span>
+                  <span>(4.4)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">S/.45.00</span>
+                  <button
+                    type="button"
+                    class="btn btn-cta btn-sm js-add-to-cart"
+                    data-id="bloques-de-colores"
+                  >
+                    + Carrito
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 4: Sonajero -->
+            <article
+              class="product-card apple-reveal"
+              style="--reveal-delay: 270ms"
+            >
+              <div class="product-thumb-wrap">
+                <button
+                  type="button"
+                  class="fav-btn js-fav-toggle"
+                  data-id="sonajero"
+                  aria-label="Guardar en favoritos"
+                >
+                  <svg
+                    class="icon-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </button>
+                <a href="producto.html?id=sonajero">
+                  <img src="assets/img/prod-sonajero.jpg" alt="SONAJERO" />
+                </a>
+              </div>
+              <div class="product-body">
+                <span class="product-cat">Juguetes Didácticos</span>
+                <h3 class="product-title">
+                  <a href="producto.html?id=sonajero">SONAJERO</a>
+                </h3>
+                <div class="product-rating">
+                  <span class="stars">★ ★ ★ ★</span>
+                  <span>(4.1)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">S/.23.00</span>
+                  <button
+                    type="button"
+                    class="btn btn-cta btn-sm js-add-to-cart"
+                    data-id="sonajero"
+                  >
+                    + Carrito
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>SHAMAKITO</h3>
+            <p>
+              Juguetes Montessori y mobiliario infantil para acompañar cada
+              etapa del desarrollo.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Categorías</h4>
+            <ul>
+              <li>
+                <a href="catalogo.html?categoria=Juguetes+Did%C3%A1cticos"
+                  >Juguetes Didácticos</a
+                >
+              </li>
+              <li>
+                <a href="catalogo.html?categoria=Mobiliario+Infantil"
+                  >Mobiliario Infantil</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Información</h4>
+            <ul>
+              <li><a href="index.html#proposito">Nosotros</a></li>
+              <li><a href="catalogo.html">Tienda</a></li>
+              <li><a href="design-system.html">Design System v2</a></li>
+              <li><a href="perfil.html">Contactos</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Ayuda</h4>
+            <ul>
+              <li><a href="carrito.html">Envíos y Entrega</a></li>
+              <li><a href="producto.html">Cambios y Devoluciones</a></li>
+              <li><a href="index-backup.html">Versión Clásica (Backup)</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>2026 Shamakito E.I.R.L. Todos los derechos reservados.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

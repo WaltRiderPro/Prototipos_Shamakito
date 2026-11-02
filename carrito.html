@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Carrito — Shamakito | Tu selección Montessori</title>
+    <meta
+      name="description"
+      content="Revisa tus productos seleccionados en Shamakito y disfruta de envío gratis desde S/. 100."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Mobile & Tablet Navigation Drawer -->
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menú móvil">
+      <div class="drawer-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/img/logo.png" alt="Shamakito Logo" />
+        </a>
+        <button
+          type="button"
+          class="drawer-close"
+          id="closeDrawerBtn"
+          aria-label="Cerrar menú"
+        >
+          <svg
+            class="icon-svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link"
+          >Inicio
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="catalogo.html" class="drawer-link"
+          >Catálogo de Productos
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="carrito.html" class="drawer-link active"
+          >Mi Carrito <span class="cart-badge js-cart-count">3</span></a
+        >
+        <a href="checkout.html" class="drawer-link"
+          >Confirmar Pedido
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="perfil.html" class="drawer-link"
+          >Mi Perfil
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="pedidos.html" class="drawer-link"
+          >Mis Pedidos
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="favoritos.html" class="drawer-link"
+          >Mis Favoritos
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="design-system.html" class="drawer-link"
+          >Design System v2
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+        <a href="login.html" class="drawer-link"
+          >Cerrar sesión
+          <svg
+            class="icon-svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="9 18 15 12 9 6" /></svg
+        ></a>
+      </nav>
+    </aside>
+
+    <!-- Site Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="header-left">
+          <button
+            type="button"
+            class="menu-toggle js-open-drawer"
+            aria-label="Abrir menú"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <a href="index.html" class="brand-logo">
+            <img
+              src="assets/img/logo.png"
+              alt="Shamakito — Arte y diversión en madera"
+            />
+          </a>
+        </div>
+
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="index.html" class="nav-pill nav-link-page">INICIO</a>
+          <a href="catalogo.html" class="nav-pill nav-link-page">PRODUCTOS</a>
+          <a href="carrito.html" class="nav-pill active">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+              ></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span>CARRITO</span>
+            <span class="cart-badge js-cart-count">3</span>
+          </a>
+          <a href="perfil.html" class="user-pill">
+            <span class="user-initial">F</span>
+            <span>FABRICIO</span>
+            <span class="user-caret"
+              ><svg
+                class="icon-svg"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" /></svg
+            ></span>
+          </a>
+        </nav>
+
+        <div class="header-mobile-actions">
+          <a href="carrito.html" class="mobile-cart-btn" aria-label="Carrito">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+              ></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-badge js-cart-count">3</span>
+          </a>
+          <button
+            type="button"
+            class="menu-toggle js-open-drawer"
+            aria-label="Abrir menú"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Cart Hero -->
+      <section class="cart-hero">
+        <div class="container cart-hero-grid">
+          <div>
+            <span class="section-eyebrow"
+              ><svg
+                class="icon-svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+              </svg>
+              TU SELECCIÓN SHAMAKITO</span
+            >
+            <h1>Mi carrito</h1>
+            <p id="cartHeroCount">
+              3 productos listos para seguir aprendiendo y jugando.
+            </p>
+          </div>
+
+          <div class="shipping-goal-card">
+            <div class="shipping-goal-top">
+              <span
+                ><svg
+                  class="icon-svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="1" y="3" width="15" height="13" rx="1" />
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                  <circle cx="5.5" cy="18.5" r="2.5" />
+                  <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
+                ¡Tu envío es gratis!</span
+              >
+              <span>Meta S/. 100</span>
+            </div>
+            <p>
+              Superaste la meta. Disfruta envío gratis a todo Lima
+              Metropolitana.
+            </p>
+            <div class="shipping-progress-track">
+              <div
+                class="shipping-progress-fill"
+                id="shippingProgressBar"
+                style="width: 100%"
+              ></div>
+            </div>
+            <div class="shipping-unlocked" id="shippingStatusText">
+              <svg
+                class="icon-svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span>Beneficio desbloqueado</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-bar" aria-label="Migas de pan">
+          <ol class="breadcrumb-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li>/</li>
+            <li class="breadcrumb-current">Carrito de compras</li>
+          </ol>
+        </nav>
+
+        <!-- Cart Layout -->
+        <div class="cart-layout">
+          <!-- Left Column: Cart Products + Coupon -->
+          <div>
+            <div class="cart-items-header">
+              <div>
+                <h2>Tus productos</h2>
+                <p>Revisa cantidades antes de continuar con tu compra.</p>
+              </div>
+              <button type="button" class="empty-cart-btn" id="emptyCartBtn">
+                Vaciar carrito
+              </button>
+            </div>
+
+            <div class="cart-list" id="cartItemsList">
+              <!-- Populated by js/app.js -->
+            </div>
+
+            <div class="coupon-card">
+              <div class="coupon-info">
+                <span class="coupon-icon"
+                  ><svg
+                    class="icon-svg"
+                    width="17"
+                    height="17"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                    />
+                    <line x1="7" y1="7" x2="7.01" y2="7" /></svg
+                ></span>
+                <div>
+                  <h4>¿Tienes un cupón?</h4>
+                  <p>Ingresa tu código de descuento.</p>
+                </div>
+              </div>
+              <div class="coupon-form">
+                <input
+                  type="text"
+                  id="couponInput"
+                  placeholder="Ej. SHAMAKITO10"
+                  value="SHAMAKITO10"
+                />
+                <button
+                  type="button"
+                  class="btn btn-cta btn-sm"
+                  id="applyCouponBtn"
+                >
+                  Aplicar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Sticky Order Summary -->
+          <aside class="cart-summary-card" aria-label="Resumen de compra">
+            <div class="summary-header">
+              <span class="summary-icon"
+                ><svg
+                  class="icon-svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"
+                  />
+                  <path d="M14 8H8" />
+                  <path d="M16 12H8" />
+                  <path d="M13 16H8" /></svg
+              ></span>
+              <div>
+                <h3>Resumen de compra</h3>
+                <p id="summaryItemsCount">3 productos en tu carrito</p>
+              </div>
+            </div>
+
+            <div class="summary-rows">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="summarySubtotal">S/. 575.00</strong>
+              </div>
+              <div class="summary-row free">
+                <span>Envío</span>
+                <strong>GRATIS</strong>
+              </div>
+              <div class="summary-row discount" id="summaryDiscountRow">
+                <span id="summaryDiscountCode">Descuento SHAMAKITO10</span>
+                <strong id="summaryDiscountVal">− S/. 57.50</strong>
+              </div>
+            </div>
+
+            <div class="summary-total-row">
+              <div>
+                <strong>Total</strong>
+                <small>Impuestos incluidos</small>
+              </div>
+              <div class="summary-total-price" id="summaryTotal">
+                S/. 517.50
+              </div>
+            </div>
+
+            <div class="summary-actions">
+              <button type="button" class="btn btn-cta" id="checkoutBtn">
+                Finalizar compra
+              </button>
+              <a href="catalogo.html" class="btn btn-outline"
+                >← Seguir comprando</a
+              >
+            </div>
+
+            <div class="safe-pay-box">
+              <h5>
+                <svg
+                  class="icon-svg"
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <polyline points="9 12 11 14 15 10" />
+                </svg>
+                Pago 100% seguro
+              </h5>
+              <p>
+                Tus datos están protegidos. Aceptamos Visa, Mastercard, Yape y
+                Plin.
+              </p>
+              <div class="pay-badges">
+                <span class="pay-badge">VISA</span>
+                <span class="pay-badge">MC</span>
+                <span class="pay-badge">YAPE</span>
+                <span class="pay-badge">PLIN</span>
+              </div>
+            </div>
+
+            <ul class="summary-perks">
+              <li>
+                <svg
+                  class="icon-svg"
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="1 4 1 10 7 10" />
+                  <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                </svg>
+                Cambios y devoluciones hasta 15 días
+              </li>
+              <li>
+                <svg
+                  class="icon-svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"
+                  />
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                </svg>
+                Madera certificada y materiales seguros
+              </li>
+              <li>
+                <svg
+                  class="icon-svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                  />
+                </svg>
+                Acompañamiento antes y después de comprar
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- You May Also Like Section -->
+        <section class="bestsellers-section">
+          <div class="section-header-row">
+            <div>
+              <div class="section-eyebrow">TAMBIÉN PODRÍA GUSTARTE</div>
+              <h2 class="section-title">Sigue explorando y jugando</h2>
+              <p style="font-size: 13px; color: var(--text-secondary)">
+                Elegidos por familias que aman aprender jugando.
+              </p>
+            </div>
+            <a href="catalogo.html" class="section-link"
+              >Ver todos los productos →</a
+            >
+          </div>
+
+          <div class="products-4-grid">
+            <article class="product-card">
+              <div class="product-thumb-wrap">
+                <span class="product-badge">OFERTA</span>
+                <button
+                  type="button"
+                  class="fav-btn js-fav-toggle"
+                  aria-label="Favorito"
+                >
+                  <svg
+                    class="icon-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </button>
+                <a href="producto.html?id=sonajero">
+                  <img src="assets/img/prod-sonajero.jpg" alt="SONAJERO" />
+                </a>
+              </div>
+              <div class="product-body">
+                <span class="product-cat">Juguetes Didácticos</span>
+                <h3 class="product-title">
+                  <a href="producto.html?id=sonajero">SONAJERO</a>
+                </h3>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">S/. 23.00</span>
+                  <button
+                    type="button"
+                    class="btn btn-cta btn-sm js-add-to-cart"
+                    data-id="sonajero"
+                  >
+                    + Carrito
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-thumb-wrap">
+                <button
+                  type="button"
+                  class="fav-btn js-fav-toggle"
+                  aria-label="Favorito"
+                >
+                  <svg
+                    class="icon-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </button>
+                <a href="producto.html?id=torre-de-argollas">
+                  <img
+                    src="assets/img/prod-torre-argollas.jpg"
+                    alt="TORRE DE ARGOLLAS"
+                  />
+                </a>
+              </div>
+              <div class="product-body">
+                <span class="product-cat">Juguetes Didácticos</span>
+                <h3 class="product-title">
+                  <a href="producto.html?id=torre-de-argollas"
+                    >TORRE DE ARGOLLAS</a
+                  >
+                </h3>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">S/. 65.00</span>
+                  <button
+                    type="button"
+                    class="btn btn-cta btn-sm js-add-to-cart"
+                    data-id="torre-de-argollas"
+                  >
+                    + Carrito
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-thumb-wrap">
+                <span class="product-badge">NUEVO</span>
+                <button
+                  type="button"
+                  class="fav-btn js-fav-toggle"
+                  aria-label="Favorito"
+                >
+                  <svg
+                    class="icon-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </button>
+                <a href="producto.html?id=rompecabezas">
+                  <img
+                    src="assets/img/prod-rompecabezas.jpg"
+                    alt="ROMPECABEZAS"
+                  />
+                </a>
+              </div>
+              <div class="product-body">
+                <span class="product-cat">Juguetes Didácticos</span>
+                <h3 class="product-title">
+                  <a href="producto.html?id=rompecabezas">ROMPECABEZAS</a>
+                </h3>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">S/. 89.00</span>
+                  <button
+                    type="button"
+                    class="btn btn-cta btn-sm js-add-to-cart"
+                    data-id="rompecabezas"
+                  >
+                    + Carrito
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-thumb-wrap">
+                <button
+                  type="button"
+                  class="fav-btn js-fav-toggle"
+                  aria-label="Favorito"
+                >
+                  <svg
+                    class="icon-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                    />
+                  </svg>
+                </button>
+                <a href="producto.html?id=tablero-de-formas">
+                  <img
+                    src="assets/img/prod-tablero-formas.jpg"
+                    alt="TABLERO DE FORMAS"
+                  />
+                </a>
+              </div>
+              <div class="product-body">
+                <span class="product-cat">Juguetes Didácticos</span>
+                <h3 class="product-title">
+                  <a href="producto.html?id=tablero-de-formas"
+                    >TABLERO DE FORMAS</a
+                  >
+                </h3>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                </div>
+                <div class="product-footer">
+                  <span class="product-price">S/. 120.00</span>
+                  <button
+                    type="button"
+                    class="btn btn-cta btn-sm js-add-to-cart"
+                    data-id="tablero-de-formas"
+                  >
+                    + Carrito
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3>SHAMAKITO</h3>
+            <p>
+              Juguetes Montessori y mobiliario infantil para acompañar cada
+              etapa del desarrollo con amor, seguridad y propósito.
+            </p>
+            <div class="footer-socials">
+              <a href="#ig" class="social-icon" aria-label="Instagram"
+                ><svg
+                  class="icon-svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg
+              ></a>
+              <a href="#fb" class="social-icon" aria-label="Facebook"
+                ><svg
+                  class="icon-svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  /></svg
+              ></a>
+              <a href="#wa" class="social-icon" aria-label="WhatsApp"
+                ><svg
+                  class="icon-svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Categorías</h4>
+            <ul>
+              <li>
+                <a href="catalogo.html?categoria=Juguetes+Did%C3%A1cticos"
+                  >Juguetes Didácticos</a
+                >
+              </li>
+              <li>
+                <a href="catalogo.html?categoria=Mobiliario+Infantil"
+                  >Mobiliario Infantil</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Información</h4>
+            <ul>
+              <li><a href="index.html#proposito">Nosotros</a></li>
+              <li><a href="catalogo.html">Tienda</a></li>
+              <li><a href="index.html#proposito">Blog</a></li>
+              <li><a href="perfil.html">Contactos</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Ayuda</h4>
+            <ul>
+              <li><a href="carrito.html">Envíos y Entrega</a></li>
+              <li><a href="producto.html">Cambios y Devoluciones</a></li>
+              <li><a href="perfil.html">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>2026 Shamakito E.I.R.L. Todos los derechos reservados.</span>
+          <div class="footer-legal-links">
+            <a href="#privacidad">Privacidad</a>
+            <a href="#cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
